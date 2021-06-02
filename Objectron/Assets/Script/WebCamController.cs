@@ -74,30 +74,32 @@ public class WebCamController : MonoBehaviour
             pointList.Add(point);
         }
 
-        DrawPoint(pointList[0], new Color32(255, 255, 255, 0), 10.0f);  // 重心(Center of gravity)
-        DrawPoint(pointList[1], new Color32(0, 0, 255, 0), 10.0f);  // 後01(Back01)
-        DrawPoint(pointList[2], new Color32(0, 255, 0, 0), 10.0f);  // 前01(Front01)
-        DrawPoint(pointList[3], new Color32(0, 0, 255, 0), 10.0f);  // 後02(Back02)
-        DrawPoint(pointList[4], new Color32(0, 255, 0, 0), 10.0f);  // 前02(Front02)
-        DrawPoint(pointList[5], new Color32(0, 0, 255, 0), 10.0f);  // 後03(Back03)
-        DrawPoint(pointList[6], new Color32(0, 255, 0, 0), 10.0f);  // 前03(Front03)
-        DrawPoint(pointList[7], new Color32(0, 0, 255, 0), 10.0f);  // 後04(Back04)
-        DrawPoint(pointList[8], new Color32(0, 255, 0, 0), 10.0f);  // 前04(Front04)
+        if (score > 0.75f) {
+            DrawPoint(pointList[0], new Color32(255, 255, 255, 0), 10.0f);  // 重心(Center of gravity)
+            DrawPoint(pointList[1], new Color32(0, 0, 255, 0), 10.0f);  // 後01(Back01)
+            DrawPoint(pointList[2], new Color32(0, 255, 0, 0), 10.0f);  // 前01(Front01)
+            DrawPoint(pointList[3], new Color32(0, 0, 255, 0), 10.0f);  // 後02(Back02)
+            DrawPoint(pointList[4], new Color32(0, 255, 0, 0), 10.0f);  // 前02(Front02)
+            DrawPoint(pointList[5], new Color32(0, 0, 255, 0), 10.0f);  // 後03(Back03)
+            DrawPoint(pointList[6], new Color32(0, 255, 0, 0), 10.0f);  // 前03(Front03)
+            DrawPoint(pointList[7], new Color32(0, 0, 255, 0), 10.0f);  // 後04(Back04)
+            DrawPoint(pointList[8], new Color32(0, 255, 0, 0), 10.0f);  // 前04(Front04)
 
-        DrawLine(pointList[1], pointList[2], new Color32(255, 255, 255, 0));
-        DrawLine(pointList[3], pointList[4], new Color32(255, 255, 255, 0));
-        DrawLine(pointList[5], pointList[6], new Color32(255, 255, 255, 0));
-        DrawLine(pointList[7], pointList[8], new Color32(255, 255, 255, 0));
-        
-        DrawLine(pointList[1], pointList[5], new Color32(0, 0, 255, 0));
-        DrawLine(pointList[3], pointList[7], new Color32(0, 0, 255, 0));
-        DrawLine(pointList[1], pointList[3], new Color32(0, 0, 255, 0));
-        DrawLine(pointList[5], pointList[7], new Color32(0, 0, 255, 0));
-        
-        DrawLine(pointList[2], pointList[6], new Color32(0, 255, 0, 0));
-        DrawLine(pointList[4], pointList[8], new Color32(0, 255, 0, 0));
-        DrawLine(pointList[2], pointList[4], new Color32(0, 255, 0, 0));
-        DrawLine(pointList[6], pointList[8], new Color32(0, 255, 0, 0));
+            DrawLine(pointList[1], pointList[2], new Color32(255, 255, 255, 0));
+            DrawLine(pointList[3], pointList[4], new Color32(255, 255, 255, 0));
+            DrawLine(pointList[5], pointList[6], new Color32(255, 255, 255, 0));
+            DrawLine(pointList[7], pointList[8], new Color32(255, 255, 255, 0));
+            
+            DrawLine(pointList[1], pointList[5], new Color32(0, 0, 255, 0));
+            DrawLine(pointList[3], pointList[7], new Color32(0, 0, 255, 0));
+            DrawLine(pointList[1], pointList[3], new Color32(0, 0, 255, 0));
+            DrawLine(pointList[5], pointList[7], new Color32(0, 0, 255, 0));
+            
+            DrawLine(pointList[2], pointList[6], new Color32(0, 255, 0, 0));
+            DrawLine(pointList[4], pointList[8], new Color32(0, 255, 0, 0));
+            DrawLine(pointList[2], pointList[4], new Color32(0, 255, 0, 0));
+            DrawLine(pointList[6], pointList[8], new Color32(0, 255, 0, 0));
+        }
 
         texture.SetPixels32(cameraBuffer);
         texture.Apply();
