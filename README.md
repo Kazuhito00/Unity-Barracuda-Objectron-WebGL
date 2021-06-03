@@ -18,9 +18,9 @@ WebCamController.cs の Update()の呼び出し周期を計測したものです
 |  | Objectron(Shoe) |
 | - | :- |
 | WebGL<br>CPU：Core i7-8750H CPU @2.20GHz | 約2.9FPS<br>CSharpBurst |
-| Unity Editor<br>GPU：GTX 1050 Ti Max-Q(4GB) | 約30FPS<br>ComputePrecompiled |
+| Unity Editor<br>GPU：GTX 1050 Ti Max-Q(4GB) | 約22FPS<br>ComputePrecompiled |
 
-※下記イメージはUnity Editor上での実行(GPU推論)
+※下記イメージはUnity Editor上での実行(GPU推論)<br>
 <img src="https://user-images.githubusercontent.com/37477845/120524025-8c2a4280-c411-11eb-8c47-9894ac43e00a.gif" width="60%"><br>
 
 # Convert to ONNX
@@ -29,6 +29,9 @@ WebCamController.cs の Update()の呼び出し周期を計測したものです
 # Reference
 * [Barracuda 1.3.0 preview](https://docs.unity3d.com/Packages/com.unity.barracuda@1.3/manual/index.html)
 * [MediaPipe Objectron](https://google.github.io/mediapipe/solutions/objectron)
+
+# ToDo
+- [ ] worker.Execute()に渡す入力形式をWebGLビルドと通常ビルドで切り分ける<br>(WebGLビルド：float配列、通常ビルド：Texture)
 
 # Author
 高橋かずひと(https://twitter.com/KzhtTkhs)
