@@ -50,6 +50,10 @@ public class WebCamController : MonoBehaviour
     
     void Update()
     {
+        if (cameraBuffer == null) {
+            return;
+        }
+
         fpsCounter.Update();
 
         // 入力用テクスチャ準備
