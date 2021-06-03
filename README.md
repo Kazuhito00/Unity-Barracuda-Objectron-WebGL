@@ -18,10 +18,10 @@ WebCamController.cs の Update()の呼び出し周期を計測したものです
 |  | Objectron(Shoe) |
 | - | :- |
 | WebGL<br>CPU：Core i7-8750H CPU @2.20GHz | 約2.9FPS<br>CSharpBurst |
-| Unity Editor<br>GPU：GTX 1050 Ti Max-Q(4GB) | 約22FPS<br>ComputePrecompiled |
+| Unity Editor<br>GPU：GTX 1050 Ti Max-Q(4GB) | 約45FPS<br>ComputePrecompiled |
 
 ※下記イメージはUnity Editor上での実行(GPU推論)<br>
-<img src="https://user-images.githubusercontent.com/37477845/120524025-8c2a4280-c411-11eb-8c47-9894ac43e00a.gif" width="60%"><br>
+<img src="https://user-images.githubusercontent.com/37477845/120667929-ed611d00-c4c8-11eb-8347-79a958fef2fd.gif" width="60%"><br>
 
 # Convert to ONNX
 [tflite2onnx.ipynb](tflite2onnx.ipynb)を上から順に実行してください。
