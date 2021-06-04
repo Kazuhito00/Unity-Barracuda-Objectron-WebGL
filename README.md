@@ -31,7 +31,7 @@ WebCamController.cs の Update()の呼び出し周期を計測したものです
 * [MediaPipe Objectron](https://google.github.io/mediapipe/solutions/objectron)
 
 # ToDo
-- [ ] worker.Execute()に渡す入力形式をWebGLビルドと通常ビルドで切り分ける<br>(WebGLビルド：float配列、通常ビルド：Texture)
+- [x] ~~worker.Execute()に渡す入力形式をWebGLビルドと通常ビルドで切り分ける<br>(WebGLビルド：float配列、通常ビルド：Texture)~~
 
 # Author
 高橋かずひと(https://twitter.com/KzhtTkhs)
