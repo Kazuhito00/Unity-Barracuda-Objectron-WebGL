@@ -101,7 +101,7 @@ public class Objectron
 
     public float[] Inference(Texture2D texture)
     {
-        texture = ResizeTexture(texture, 224, 224);
+        texture = ResizeTexture(texture, inputShapeX, inputShapeY);
         var inputTensor = new Tensor(texture, 3);
 
         // 推論実行
@@ -117,7 +117,7 @@ public class Objectron
         
         for (int i = 0; i < pointArray.Length; i = i + 2)
         {
-            pointArray[i] = (pointArray[i] * (-1)) + 224;
+            pointArray[i] = (pointArray[i] * (-1)) + inputShapeX;
         }
                 
         // 結果格納
